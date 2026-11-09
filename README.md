@@ -61,15 +61,19 @@ source BP_venv/bin/activate
 pip install numpy scipy pandas matplotlib seaborn wfdb joblib tqdm pillow jupyter
 ```
 
+
 ## Data
 
-The scripts that use physiological waveform records expect the MIMIC waveform database to be available at:
+The scripts use physiological waveform recordings from the [MIMIC Waveform Database](https://physionet.org/content/mimicdb/1.0.0/), available through PhysioNet.
 
-```text
-../../../../../../data/physionet.org/files/mimicdb/1.0.0
+Download the dataset and specify the root directory where the data is stored:
+
+```python
+DATA_ROOT = "/path/to/your/data"
 ```
 
-This path is relative to the `codes/` directory and is used by scripts `01`, `03`, `04`, and `05`. If the database is stored elsewhere, update the `data_dir` setting in those scripts.
+The scripts `01`, `03`, `04`, and `05` require access to this dataset. Configure the `data_dir` variable in these scripts using the specified data root directory.
+
 
 ## Jupyter Notebooks
 
